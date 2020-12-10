@@ -20,7 +20,7 @@ public class MainFrame extends JFrame {
     // Флаг, указывающий на загруженность данных графика
     private boolean fileLoaded = false;
     public MainFrame(){
-        super("Построение графиков функций на основе заранее подготовленных файлов");
+        super("Построение графика функции на основе заранее подготовленных файлов");
         // Установка размеров окна
         setSize(WIDTH, HEIGHT);
         Toolkit kit = Toolkit.getDefaultToolkit();
@@ -114,7 +114,7 @@ public class MainFrame extends JFrame {
             in.close();
         } catch (FileNotFoundException ex) {
             // В случае исключительной ситуации типа "Файл не найден" показать сообщение об ошибке
-            JOptionPane.showMessageDialog(MainFrame.this, "Указанный файл не найден", "Ошибка загрузки данных", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(MainFrame.this, "Указанный файл не найден","Ошибка загрузки данных", JOptionPane.WARNING_MESSAGE);
             return;
         } catch (IOException ex) {
             // В случае ошибки ввода из файлового потока показать сообщение об ошибке
@@ -140,7 +140,6 @@ public class MainFrame extends JFrame {
         // Обработчик, вызываемый после того, как меню исчезло с экрана
         @Override
         public void menuDeselected(MenuEvent e) {
-
         }
         // Обработчик, вызываемый в случае отмены выбора пункта меню (очень редкая ситуация)
         @Override

@@ -33,7 +33,7 @@ public class GraphicsDisplay extends JPanel {
         // Перо для рисования контуров маркеров
         markerStroke = new BasicStroke(2.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_MITER, 90.0f, null, 0.0f);
         // Шрифт для подписей осей координат
-        axisFont = new Font("Serif", Font.BOLD, 35);
+        axisFont = new Font("Courier", Font.BOLD, 35);
     }
     // Данный метод вызывается из обработчика элемента меню "Открыть файл с графиком"
     // главного окна приложения в случае успешной загрузки данных
@@ -88,7 +88,6 @@ public class GraphicsDisplay extends JPanel {
             minY -= yIncrement;
         }
         if (scale == scaleY){
-
             double xIncrement = (getSize().getWidth() / scale - (maxX - minX)) / 2;
             maxX += xIncrement;
             minX -= xIncrement;
@@ -185,7 +184,6 @@ public class GraphicsDisplay extends JPanel {
         FontRenderContext context = canvas.getFontRenderContext();
         // Определить, должна ли быть видна ось Y на графике
         if (minX <= 0.0 && maxX >= 0.0){
-
             canvas.draw(new Line2D.Double(xyToPoint(0, maxY), xyToPoint(0, minY)));
             // Стрелка оси Y
             GeneralPath arrow = new GeneralPath();
